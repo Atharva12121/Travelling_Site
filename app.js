@@ -30,7 +30,7 @@ const dbUrl = process.env.ATLASDB_URL;
 const store = MongoStore.create({
     mongoUrl: dbUrl,
     crypto: {
-        secret: SECRET // use to  encrpt the  data
+        secret: process.env.SECRET // use to  encrpt the  data
     },
     touchAfter: 24 * 3600, //use when the referse the page than relogin to avoid this their have time has to be set it mean their will be updation on session in 24 hourse
 
