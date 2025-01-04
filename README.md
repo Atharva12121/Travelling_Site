@@ -6,11 +6,6 @@ A web application designed to simplify travel planning, offering features like u
 
 To run this project locally, follow these steps:
 
-Clone the repository:
-
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
-
 Install dependencies:
 
 npm install
