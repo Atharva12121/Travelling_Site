@@ -83,17 +83,9 @@ app.engine('ejs', ejsMate);
 app.use(express.static(path.join(__dirname, "/public")));
 
 async function main() {
-  try {
-    await mongoose.connect(dbUrl, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      ssl: true,
-      tlsAllowInvalidCertificates: true, // optional if self-signed certs
-    });
-    console.log("✅ Connected to MongoDB Atlas");
-  } catch (err) {
-    console.error("❌ MongoDB connection error:", err);
-  }
+    // const dbUrl = process.env.ATLASDB_URL;
+
+    await mongoose.connect(dbUrl);
 }
 
 app.use((req, res, next) => {
